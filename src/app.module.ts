@@ -6,6 +6,7 @@ import { AuthController } from './auth/auth.controller';
 import { AuthModule } from './auth/auth.module';
 import { UserService } from './user/user.service';
 import { UserController } from './user/user.controller';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [AuthModule],
