@@ -1,9 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreateUserDto } from './dto/create-user.dto';
 import { User, UserDocument } from 'src/user/schemas/user.schema';
-import { BadRequestException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 const saltOrRounds = 10;
 
