@@ -11,6 +11,10 @@ export class Payment {
   month: string;
   @Prop({ required: true })
   classLocation: string;
+  @Prop({ required: true })
+  amount: string;
+  @Prop()
+  date: Date;
 }
 
 export const PaymentSchema = SchemaFactory.createForClass(Payment);

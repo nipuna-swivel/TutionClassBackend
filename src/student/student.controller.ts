@@ -18,8 +18,8 @@ import { ApiBearerAuth } from '@nestjs/swagger';
 export class StudentController {
   constructor(private readonly studentService: StudentService) {}
   @Post()
- // @UseGuards(AuthGuard('jwt'))
- // @ApiBearerAuth('access-token')
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth('access-token')
   create(@Body() createUserDto: CreateStudentDto) {
     return this.studentService.create(createUserDto);
   }
@@ -34,11 +34,15 @@ export class StudentController {
     return this.studentService.findOne(id);
   }
 
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth('access-token')
   @Put(':id')
   update(@Param('id') id: string, @Body() updateStudentDto: UpdateStudentDto) {
     return this.studentService.update(id, updateStudentDto);
   }
 
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth('access-token')
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.studentService.remove(id);
