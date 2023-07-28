@@ -8,7 +8,7 @@ export class Student {
   @Prop({ required: true })
   name: string;
   @Prop({ required: true })
-  birthday: Date;
+  nic: string;
   @Prop({ required: true })
   school: string;
   @Prop({ required: true })

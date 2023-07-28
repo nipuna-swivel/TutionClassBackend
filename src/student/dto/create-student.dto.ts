@@ -8,13 +8,13 @@ export class CreateStudentDto {
   @IsNotEmpty()
   nic: string;
 
-  birthDate: Date;
-
+  @IsString()
   school: string;
 
   @IsString()
   @IsNotEmpty()
   contactNo: string;
 
-  joinedDate: Date;
+  @IsString()
+  classLocation: string;
 }
