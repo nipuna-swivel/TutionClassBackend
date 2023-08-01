@@ -20,15 +20,19 @@ export class StudentController {
   @Post()
   @UseGuards(AuthGuard('jwt'))
   @ApiBearerAuth('access-token')
-  create(@Body() createUserDto: CreateStudentDto) {
-    return this.studentService.create(createUserDto);
+  create(@Body() createStudentDto: CreateStudentDto) {
+    return this.studentService.create(createStudentDto);
   }
 
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth('access-token')
   @Get()
   findAll() {
     return this.studentService.findAll();
   }
 
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth('access-token')
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.studentService.findOne(id);
