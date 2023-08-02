@@ -6,7 +6,7 @@ export class CreateTutionClassDto {
 
   @IsString()
   @IsNotEmpty()
-  Day: string;
+  day: string;
 
   @IsString()
   @IsNotEmpty()

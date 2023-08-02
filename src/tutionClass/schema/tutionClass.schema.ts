@@ -8,7 +8,7 @@ export class TutionClass {
   @Prop({ required: true })
   classLocation: string;
   @Prop({ required: true })
-  Day: string;
+  day: string;
   @Prop({ required: true })
   time: string;
   @Prop({ required: true })
