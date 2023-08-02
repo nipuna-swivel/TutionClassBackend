@@ -10,7 +10,7 @@ import { AuthService } from './auth.service';
 import { AuthCredentialDto } from './dto/auth-credentiol.dto';
 import { LoginResponse } from '../swagger-options';
 
-@ApiTags('auth')
+@ApiTags('Auth API')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}

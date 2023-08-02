@@ -12,8 +12,9 @@ import { CreateTutionClassDto } from './dto/create-tutionClass.dto';
 import { TutionClassService } from './tutionClass.service';
 import { UpdateTutionClassDto } from './dto/update-tutionClass.dto';
 import { AuthGuard } from '@nestjs/passport';
-import { ApiBearerAuth } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Tution Class API')
 @Controller('tutionClass')
 export class TutionClassController {
   constructor(private readonly tutionClassService: TutionClassService) {}

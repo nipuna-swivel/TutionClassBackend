@@ -12,8 +12,9 @@ import { CreateStudentDto } from './dto/create-student.dto';
 import { StudentService } from './student.service';
 import { UpdateStudentDto } from './dto/update-student.dto';
 import { AuthGuard } from '@nestjs/passport';
-import { ApiBearerAuth } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Student API')
 @Controller('student')
 export class StudentController {
   constructor(private readonly studentService: StudentService) {}

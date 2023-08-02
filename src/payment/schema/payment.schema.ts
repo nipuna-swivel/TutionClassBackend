@@ -13,7 +13,7 @@ export class Payment {
   classLocation: string;
   @Prop({ required: true })
   amount: string;
-  @Prop()
+  @Prop({ required: true })
   date: Date;
 }
 
