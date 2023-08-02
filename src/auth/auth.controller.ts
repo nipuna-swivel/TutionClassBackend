@@ -4,6 +4,7 @@ import {
   ApiBody,
   ApiExtraModels,
   getSchemaPath,
+  ApiOperation,
 } from '@nestjs/swagger';
 import { Controller, Post, Body } from '@nestjs/common';
 import { AuthService } from './auth.service';
@@ -16,6 +17,7 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Post('/login')
+  @ApiOperation({ summary: 'Login api end point' })
   @ApiExtraModels(AuthCredentialDto)
   @ApiBody({
     schema: {
