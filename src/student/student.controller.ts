@@ -26,6 +26,7 @@ import {
 export class StudentController {
   constructor(private readonly studentService: StudentService) {}
   @Post()
+  @ApiOperation({ summary: 'create a student record' })
   @UseGuards(AuthGuard('jwt'))
   @ApiBearerAuth('access-token')
   @ApiBody({
@@ -91,6 +92,7 @@ export class StudentController {
   @UseGuards(AuthGuard('jwt'))
   @ApiBearerAuth('access-token')
   @Get(':id')
+  @ApiOperation({ summary: 'Get one record using id' })
   @ApiParam({
     name: 'id',
     type: 'string',
