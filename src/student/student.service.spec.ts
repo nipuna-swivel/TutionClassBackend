@@ -5,7 +5,6 @@ import { StudentService } from './student.service';
 import { CreateStudentDto } from './dto/create-student.dto';
 import { UpdateStudentDto } from './dto/update-student.dto';
 import { StudentSchema } from './schema/student.schema';
-import { StudentModule } from './student.module';
 
 describe('StudentService', () => {
   let service: StudentService;

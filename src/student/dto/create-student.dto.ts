@@ -16,5 +16,6 @@ export class CreateStudentDto {
   contactNo: string;
 
   @IsString()
+  @IsNotEmpty()
   classLocation: string;
 }

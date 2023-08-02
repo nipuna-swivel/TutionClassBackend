@@ -13,10 +13,9 @@ export class StudentService {
   ) {}
 
   async create(createStudentDto: CreateStudentDto): Promise<Student> {
-    console.log('-------1', createStudentDto);
     try {
       const createdStudent = new this.studentModel(createStudentDto);
-      console.log('----------2', createdStudent);
+
       return createdStudent.save();
     } catch (error) {
       throw new BadRequestException(error.messege);
