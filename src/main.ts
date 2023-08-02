@@ -5,7 +5,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config = new DocumentBuilder()
-    .setTitle('Tution Class')
+    .setTitle('Tution Class API Documentation')
     .setDescription('The tution class API description')
     .setVersion('1.0')
     .addTag('Tution Class')
