@@ -88,18 +88,18 @@ export class PaymentController {
 
   @UseGuards(AuthGuard('jwt'))
   @ApiBearerAuth('access-token')
-  @Get(':id')
-  @ApiOperation({ summary: 'Get payment record using Id' })
+  @Get(':studentNic')
+  @ApiOperation({ summary: 'Get payment record using NIC' })
   @ApiParam({
-    name: 'id',
+    name: 'studentNic',
     type: 'string',
     description: 'enter unique id',
     required: true,
   })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 500, description: 'Internal Server error' })
-  findOne(@Param('id') id: string) {
-    return this.paymentService.findOne(id);
+  findOne(@Param('studentNic') studentNic: string) {
+    return this.paymentService.findOne(studentNic);
   }
 
   @UseGuards(AuthGuard('jwt'))

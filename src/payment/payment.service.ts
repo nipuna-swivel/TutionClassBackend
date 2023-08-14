@@ -31,9 +31,9 @@ export class PaymentService {
     }
   }
 
-  async findOne(id: string) {
+  async findOne(studentNic: string) {
     try {
-      return this.paymentModel.findById(id);
+      return this.paymentModel.findById(studentNic);
     } catch (error) {
       throw new BadRequestException(error.messege);
     }
